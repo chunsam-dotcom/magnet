@@ -16,6 +16,13 @@ Execute:
 swift magnet.swift
 ```
 
+> [!TIP]
+> **If you see "Move to Trash" error on macOS:**
+> This happens because the app is not code-signed. To fix this, run the following command in your terminal:
+> ```bash
+> xattr -rd com.apple.quarantine ./magnet
+> ```
+
 ## ⚠️ Notes
 Grid Apps: Terminal or specialized IDEs might have 10-20px gaps due to character-grid constraints.
 Re-grant Access: If you modify the code, you may need to remove and re-add the app in Accessibility settings.
