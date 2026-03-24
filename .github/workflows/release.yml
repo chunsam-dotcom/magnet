@@ -23,8 +23,7 @@ jobs:
 
       - name: Create Release Package
         run: |
-          # 빌드된 결과물(magnet)을 zip으로 압축
-          zip magnet_macOS.zip magnet
+          zip magnet_macOS.zip magnet layout_manager
 
       - name: Release
         uses: softprops/action-gh-release@v1
