@@ -8,10 +8,18 @@ A lightweight Swift script to snap macOS windows to screen edges.
 - Vertical Monitor Support: Works perfectly with negative coordinate systems.
 
 ## 🚀 How to Run
-Grant Permission: Add your Terminal (or IDE) to System Settings > Privacy & Security > Accessibility.
+Grant Permission: Add your Terminal (or IDE, executable) to System Settings > Privacy & Security > Accessibility.
 
 Execute:
 
+- If you download excutable
+  
+```Bash
+./magnet
+```
+
+- If you want to run with source code
+  
 ```Bash
 swift magnet.swift
 ```
