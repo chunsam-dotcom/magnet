@@ -1,0 +1,32 @@
+name: Build and Release Magnet
+
+on:
+  push:
+    tags:
+      - 'v*' # v1.0, v1.1 같은 태그를 푸시하면 실행됩니다.
+
+jobs:
+  build:
+    runs-on: macos-latest # macOS 환경에서 빌드
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Make executable
+        run: chmod +x make.sh
+
+      - name: Build with make.sh
+        run: ./make.sh
+
+      - name: Create Release Package
+        run: |
+          # 빌드된 결과물(magnet)을 zip으로 압축
+          zip magnet_macOS.zip magnet
+
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: magnet_macOS.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
