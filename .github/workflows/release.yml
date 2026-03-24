@@ -8,6 +8,8 @@ on:
 jobs:
   build:
     runs-on: macos-latest # macOS 환경에서 빌드
+    permissions:
+      contents: write 
 
     steps:
       - name: Checkout code
