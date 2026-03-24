@@ -1,11 +1,11 @@
 # 🧲 Magnet.swift
-A lightweight Swift script to snap macOS windows to screen edges.
+1. A lightweight Swift script to snap macOS windows to screen edges.
+2. A utility for saving / restoring current layout via json.
 
 ## ✨ Features
 - Smart Snap: Aligns windows to screen edges when within 300px.
 - One-Shot Fill: Expands window to full width/height if both sides are near edges.
-- Force Apply: Overcomes macOS Window Manager resistance by multi-injecting coordinates.
-- Vertical Monitor Support: Works perfectly with negative coordinate systems.
+- Saving/Restoring current layout from CLI.
 
 ## 🚀 How to Run
 Grant Permission: Add your Terminal (or IDE, executable) to System Settings > Privacy & Security > Accessibility.
@@ -16,12 +16,14 @@ Execute:
   
 ```Bash
 ./magnet
+./layout_manager save
 ```
 
 - If you want to run with source code
   
 ```Bash
 swift magnet.swift
+swift layout_manager.swift
 ```
 
 > [!TIP]
